@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Blog</title>
+	  <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,400' rel='stylesheet' type='text/css'>
+	  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<%= render "partials/navigation"%>
+		<div style="<%= "dispayl:none; if notice.nil? and alert.nil?"%>>
+			<%= notice %>
+			<%= alert %>
+		</div>
+		<%= yield %>
+
+	</body>
+</html>
